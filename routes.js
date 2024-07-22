@@ -35,5 +35,12 @@ router.post('/inventarios', inventarioHandler.insertInventario)//Para insertar c
 router.patch('/inventarios/:id', inventarioHandler.updateInventario)// Para actualiozar cliente
 router.delete('/inventarios/:id', inventarioHandler.deleteInventario);// Para eliminar cliente
 
+const ventaHandler = require('./app/handlers/venta.handler');
+
+router.get('/ventas', ventaHandler.listVenta)//Para obtener cliente
+router.post('/ventas', ventaHandler.insertVenta)//Para insertar cliente
+router.patch('/ventas/:id', ventaHandler.updateVenta)// Para actualiozar cliente
+router.delete('/ventas/:id', ventaHandler.deleteVenta);// Para eliminar cliente
+
 // ... otras rutas ...
 module.exports = router;
